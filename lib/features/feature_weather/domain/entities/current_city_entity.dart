@@ -35,6 +35,21 @@ class CurrentCityEntity extends Equatable{
   });
 
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [
+    coord,
+    weather,
+    base,
+    main,
+    visibility,
+    wind,
+    rain,
+    clouds,
+    dt,
+    sys,
+    timezone,
+    id,
+    name,
+    cod
+  ];
 
 }
