@@ -1,5 +1,13 @@
 part of 'home_bloc.dart';
 
-abstract class HomeState {}
+class HomeState {
 
-class HomeInitial extends HomeState {}
+  CurrentWeatherStatus currentWeatherStatus;
+
+  HomeState({required this.currentWeatherStatus});
+
+  HomeState copyWith({CurrentWeatherStatus? newCurrentWeatherStatus}){
+    return HomeState(currentWeatherStatus: newCurrentWeatherStatus ?? currentWeatherStatus);
+  }
+
+}
