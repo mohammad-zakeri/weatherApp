@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-
 import 'core/widgets/main_wrapper.dart';
+import 'locator.dart';
 
-void main() {
+void main() async{
+
+  await setUp();
+
   runApp(const MyApp());
 }
 
