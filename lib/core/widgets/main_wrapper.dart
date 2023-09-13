@@ -1,50 +1,45 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather_app/features/feature_weather/presentation/bloc/current_weather_status.dart';
-import 'package:weather_app/features/feature_weather/presentation/bloc/home_bloc.dart';
+import '../../features/feature_bookmark/presentation/screens/bookmark_screen.dart';
+import '../../features/feature_weather/presentation/screens/home_screen.dart';
+import 'app_background.dart';
+import 'bottom_nav.dart';
 
-class MainWrapper extends StatefulWidget {
-  const MainWrapper({super.key});
+class MainWrapper extends StatelessWidget {
+  MainWrapper({Key? key}) : super(key: key);
 
-  @override
-  State<MainWrapper> createState() => _MainWrapperState();
-}
-
-class _MainWrapperState extends State<MainWrapper> {
-
-  @override
-  void initState() {
-    super.initState();
-
-    BlocProvider.of<HomeBloc>(context).add(LoadCurrentWeatherEvent("Tehran"));
-  }
+  final PageController pageController = PageController(initialPage: 0);
 
   @override
   Widget build(BuildContext context) {
 
+    List<Widget> pageViewWidget = [
+      const HomeScreen(),
+      const BookmarkScreen(),
+    ];
+
+    var height = MediaQuery.of(context).size.height;
+
     return Scaffold(
+      extendBody: true,
+      bottomNavigationBar: BottomNav(controller: pageController),
 
-      appBar: AppBar(),
+      body: Container(
 
-      body: BlocBuilder<HomeBloc, HomeState>(
+        decoration: BoxDecoration(
 
-        builder: (context, state) {
+          image: DecorationImage(
+              image: AppBackground.getBackGroundImage(),
+              fit: BoxFit.cover
+          ),
 
-          if(state.currentWeatherStatus is CurrentWeatherLoading){
-            return const Center(child: Text('loading ...'));
-          }
+        ),
 
-          if(state.currentWeatherStatus is CurrentWeatherCompleted){
-            return const Center(child: Text('completed'));
-          }
+        height: height,
 
-          if(state.currentWeatherStatus is CurrentWeatherError){
-            return const Center(child: Text('error'));
-          }
-
-          return Container();
-
-        },
+        child: PageView(
+          controller: pageController,
+          children: pageViewWidget,
+        ),
 
       ),
 
