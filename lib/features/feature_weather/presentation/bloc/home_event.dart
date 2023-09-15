@@ -8,3 +8,10 @@ class LoadCurrentWeatherEvent extends HomeEvent{
   final String cityName;
 
 }
+
+class LoadForecastWeatherEvent extends HomeEvent{
+  LoadForecastWeatherEvent(this.params);
+
+  final ForecastParams params;
+
+}
