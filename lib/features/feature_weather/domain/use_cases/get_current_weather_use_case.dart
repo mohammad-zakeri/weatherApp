@@ -13,8 +13,4 @@ class GetCurrentWeatherUseCase extends UseCase<DataState<CurrentCityEntity>, Str
     return weatherRepository.fetchCurrentWeatherData(param);
   }
 
-  // Future<DataState<CurrentCityEntity>> call(String cityName){
-  //   return weatherRepository.fetchCurrentWeatherData(cityName);
-  // }
-
 }

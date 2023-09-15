@@ -49,7 +49,7 @@ class CurrentCityEntity extends Equatable{
     timezone,
     id,
     name,
-    cod
+    cod,
   ];
 
 }
