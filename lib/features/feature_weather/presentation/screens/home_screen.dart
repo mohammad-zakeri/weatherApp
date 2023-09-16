@@ -10,11 +10,13 @@ import '../../../../core/utils/date_converter.dart';
 import '../../../../core/widgets/app_background.dart';
 import '../../../../core/widgets/dot_loading_widget.dart';
 import '../../../../locator.dart';
+import '../../../feature_bookmark/presentation/bloc/bookmark_bloc.dart';
 import '../../data/models/forecast_days_model.dart';
 import '../../data/models/suggest_city_model.dart';
 import '../../domain/entities/current_city_entity.dart';
 import '../../domain/use_cases/get_suggestion_city_usecase.dart';
 import '../bloc/home_bloc.dart';
+import '../widgets/bookmark_icon.dart';
 import '../widgets/day_weather_view.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -144,9 +146,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         }
 
                         if(state.currentWeatherStatus is CurrentWeatherCompleted){
-                          // final CurrentWeatherCompleted cwComplete = state.currentWeatherStatus as CurrentWeatherCompleted;
-                          // BlocProvider.of<BookmarkBloc>(context).add(GetCityByNameEvent(cwComplete.currentCityEntity.name!));
-                          // return BookMarkIcon(name: cwComplete.currentCityEntity.name!);
+                          final CurrentWeatherCompleted cwComplete = state.currentWeatherStatus as CurrentWeatherCompleted;
+                          BlocProvider.of<BookmarkBloc>(context).add(GetCityByNameEvent(cwComplete.currentCityEntity.name!));
+                          return BookMarkIcon(name: cwComplete.currentCityEntity.name!);
                         }
 
                         return Container();
