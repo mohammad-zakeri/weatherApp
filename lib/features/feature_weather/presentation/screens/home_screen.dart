@@ -26,7 +26,7 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMixin {
 
   TextEditingController textEditingController = TextEditingController();
 
@@ -46,6 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
 
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
@@ -610,5 +611,9 @@ class _HomeScreenState extends State<HomeScreen> {
     );
 
   }
+
+  /// used for AutomaticKeepAliveClientMixin
+  @override
+  bool get wantKeepAlive => true;
 
 }

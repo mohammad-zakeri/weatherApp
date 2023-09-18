@@ -14,7 +14,7 @@ class MainWrapper extends StatelessWidget {
 
     List<Widget> pageViewWidget = [
       const HomeScreen(),
-      const BookmarkScreen(),
+      BookmarkScreen(pageController: pageController),
     ];
 
     var height = MediaQuery.of(context).size.height;
