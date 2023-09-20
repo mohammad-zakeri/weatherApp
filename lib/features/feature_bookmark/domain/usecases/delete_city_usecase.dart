@@ -3,8 +3,9 @@ import '../../../../core/use_case/use_case.dart';
 import '../repository/city_repository.dart';
 
 class DeleteCityUseCase implements UseCase<DataState<String>, String>{
-  final CityRepository _cityRepository;
   DeleteCityUseCase(this._cityRepository);
+
+  final CityRepository _cityRepository;
 
   @override
   Future<DataState<String>> call(String params) {

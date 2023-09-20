@@ -89,11 +89,12 @@ class CurrentCityModel extends CurrentCityEntity {
 
 class Sys {
   Sys({
-      this.type, 
-      this.id, 
-      this.country, 
-      this.sunrise, 
-      this.sunset,});
+    this.type,
+    this.id,
+    this.country,
+    this.sunrise,
+    this.sunset,
+  });
 
   Sys.fromJson(dynamic json) {
     type = json['type'];
@@ -123,8 +124,7 @@ class Sys {
 /// all : 100
 
 class Clouds {
-  Clouds({
-      this.all,});
+  Clouds({this.all});
 
   Clouds.fromJson(dynamic json) {
     all = json['all'];
@@ -142,8 +142,7 @@ class Clouds {
 /// 1h : 3.16
 
 class Rain {
-  Rain({
-      this.h,});
+  Rain({this.h});
 
   Rain.fromJson(dynamic json) {
     h = json['1h'];
@@ -164,9 +163,10 @@ class Rain {
 
 class Wind {
   Wind({
-      this.speed, 
-      this.deg, 
-      this.gust,});
+    this.speed,
+    this.deg,
+    this.gust,
+  });
 
   Wind.fromJson(dynamic json) {
     speed = json['speed'];
@@ -198,14 +198,15 @@ class Wind {
 
 class Main {
   Main({
-      this.temp, 
-      this.feelsLike, 
-      this.tempMin, 
-      this.tempMax, 
-      this.pressure, 
-      this.humidity, 
-      this.seaLevel, 
-      this.grndLevel,});
+    this.temp,
+    this.feelsLike,
+    this.tempMin,
+    this.tempMax,
+    this.pressure,
+    this.humidity,
+    this.seaLevel,
+    this.grndLevel,
+  });
 
   Main.fromJson(dynamic json) {
     temp = json['temp'];
@@ -248,10 +249,11 @@ class Main {
 
 class Weather {
   Weather({
-      this.id, 
-      this.main, 
-      this.description, 
-      this.icon,});
+    this.id,
+    this.main,
+    this.description,
+    this.icon,
+  });
 
   Weather.fromJson(dynamic json) {
     id = json['id'];
@@ -279,9 +281,7 @@ class Weather {
 /// lat : 44.34
 
 class Coord {
-  Coord({
-      this.lon, 
-      this.lat,});
+  Coord({this.lon, this.lat});
 
   Coord.fromJson(dynamic json) {
     lon = json['lon'];

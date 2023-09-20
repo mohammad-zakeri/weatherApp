@@ -8,25 +8,24 @@ class SaveCityInitial extends SaveCityStatus {
   List<Object?> get props => [];
 }
 
-// loading state
 class SaveCityLoading extends SaveCityStatus{
   @override
   List<Object?> get props => [];
 }
 
-// loaded state
 class SaveCityCompleted extends SaveCityStatus{
-  final City city;
   SaveCityCompleted(this.city);
+
+  final City city;
 
   @override
   List<Object?> get props => [city];
 }
 
-// error state
 class SaveCityError extends SaveCityStatus{
-  final String? message;
   SaveCityError(this.message);
+
+  final String? message;
 
   @override
   List<Object?> get props => [message];

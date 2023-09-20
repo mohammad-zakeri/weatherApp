@@ -4,8 +4,10 @@ import 'package:intl/intl.dart';
 class AppBackground{
 
   static AssetImage getBackGroundImage(){
+
     DateTime now = DateTime.now();
     String formattedDate = DateFormat('kk').format(now);
+
     if(6 > int.parse(formattedDate)){
       return const AssetImage('assets/images/nightpic.jpg');
     }else if(18 > int.parse(formattedDate)){
@@ -13,9 +15,11 @@ class AppBackground{
     }else{
       return const AssetImage('assets/images/nightpic.jpg');
     }
+
   }
 
   static Image setIconForMain(description) {
+
     if (description == "clear sky") {
       return const Image(image: AssetImage('assets/images/icons8-sun-96.png'));
     } else if (description == "few clouds") {
@@ -33,6 +37,7 @@ class AppBackground{
     } else {
       return const Image(image: AssetImage('assets/images/icons8-windy-weather-80.png'));
     }
+
   }
 
 }

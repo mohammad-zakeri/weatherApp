@@ -7,25 +7,24 @@ class DeleteCityInitial extends DeleteCityStatus {
   List<Object?> get props => [];
 }
 
-// loading state
 class DeleteCityLoading extends DeleteCityStatus{
   @override
   List<Object?> get props => [];
 }
 
-// loaded state
 class DeleteCityCompleted extends DeleteCityStatus{
-  final String name;
   DeleteCityCompleted(this.name);
+
+  final String name;
 
   @override
   List<Object?> get props => [name];
 }
 
-// error state
 class DeleteCityError extends DeleteCityStatus{
-  final String? message;
   DeleteCityError(this.message);
+
+  final String? message;
 
   @override
   List<Object?> get props => [message];

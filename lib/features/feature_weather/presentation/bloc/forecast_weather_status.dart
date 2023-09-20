@@ -12,20 +12,19 @@ class ForecastWeatherLoading extends ForecastWeatherStatus{
 }
 
 class ForecastWeatherCompleted extends ForecastWeatherStatus{
-  final ForecastDaysEntity forecastDaysEntity;
-
   ForecastWeatherCompleted(this.forecastDaysEntity);
+
+  final ForecastDaysEntity forecastDaysEntity;
 
   @override
   List<Object?> get props => [forecastDaysEntity];
 }
 
 class ForecastWeatherError extends ForecastWeatherStatus{
-  final String message;
-
   ForecastWeatherError(this.message);
+
+  final String message;
 
   @override
   List<Object?> get props => [message];
-
 }

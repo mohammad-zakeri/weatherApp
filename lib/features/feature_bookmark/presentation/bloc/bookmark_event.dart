@@ -6,18 +6,18 @@ abstract class BookmarkEvent {}
 class GetAllCityEvent extends BookmarkEvent {}
 
 class GetCityByNameEvent extends BookmarkEvent {
-  final String cityName;
   GetCityByNameEvent(this.cityName);
+  final String cityName;
 }
 
 class SaveCwEvent extends BookmarkEvent {
-  final String name;
   SaveCwEvent(this.name);
+  final String name;
 }
 
 class SaveCityInitialEvent extends BookmarkEvent {}
 
 class DeleteCityEvent extends BookmarkEvent {
-  final String name;
   DeleteCityEvent(this.name);
+  final String name;
 }

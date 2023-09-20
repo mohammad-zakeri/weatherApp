@@ -26,7 +26,7 @@ class BookmarkBloc extends Bloc<BookmarkEvent, BookmarkState> {
       this.saveCityUseCase,
       this.getAllCityUseCase,
       this.deleteCityUseCase,
-  ) : super(
+      ) : super(
       BookmarkState(
         getCityStatus: GetCityLoading(),
         saveCityStatus: SaveCityInitial(),

@@ -15,7 +15,15 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   final GetCurrentWeatherUseCase getCurrentWeatherUseCase;
   final GetForecastWeatherUseCase getForecastWeatherUseCase;
 
-  HomeBloc(this.getCurrentWeatherUseCase, this.getForecastWeatherUseCase) : super(HomeState(currentWeatherStatus: CurrentWeatherLoading(), forecastWeatherStatus: ForecastWeatherLoading())) {
+  HomeBloc(
+      this.getCurrentWeatherUseCase,
+      this.getForecastWeatherUseCase,
+  ) : super(
+      HomeState(
+          currentWeatherStatus: CurrentWeatherLoading(),
+          forecastWeatherStatus: ForecastWeatherLoading(),
+      )
+  ) {
 
     on<LoadCurrentWeatherEvent>((event, emit) async {
 
