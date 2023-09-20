@@ -8,25 +8,32 @@ import '../../domain/entities/suggest_city_entity.dart';
 class SuggestCityModel extends SuggestCityEntity{
   const SuggestCityModel({
     List<Data>? data,
-    Metadata? metadata,}) : super(
+    Metadata? metadata,
+  }) : super(
       data: data,
       metadata: metadata
   );
 
   factory SuggestCityModel.fromJson(dynamic json) {
+
     /// parse json to object
     List<Data> data = [];
+
     if (json['data'] != null) {
+
       json['data'].forEach((v) {
         data.add(Data.fromJson(v));
       });
+
     }
 
     return SuggestCityModel(
       data: data,
       metadata: json['metadata'] != null ? Metadata.fromJson(json['metadata']) : null,
     );
+
   }
+
 }
 
 /// currentOffset : 0
@@ -35,7 +42,8 @@ class SuggestCityModel extends SuggestCityEntity{
 class Metadata {
   Metadata({
     int? currentOffset,
-    int? totalCount,}){
+    int? totalCount,
+  }){
     _currentOffset = currentOffset;
     _totalCount = totalCount;
   }
@@ -85,7 +93,8 @@ class Data {
     String? regionCode,
     double? latitude,
     double? longitude,
-    int? population,}){
+    int? population,
+  }){
     _id = id;
     _wikiDataId = wikiDataId;
     _type = type;

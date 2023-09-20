@@ -6,9 +6,9 @@ import '../../../feature_bookmark/presentation/bloc/get_city_status.dart';
 import '../../../feature_bookmark/presentation/bloc/save_city_status.dart';
 
 class BookMarkIcon extends StatelessWidget {
-  final String name;
-
   const BookMarkIcon({super.key, required this.name});
+
+  final String name;
 
   @override
   Widget build(BuildContext context) {

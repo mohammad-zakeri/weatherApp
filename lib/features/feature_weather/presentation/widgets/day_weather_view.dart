@@ -4,8 +4,9 @@ import '../../../../core/widgets/app_background.dart';
 import '../../data/models/forecast_days_model.dart';
 
 class DaysWeatherView extends StatefulWidget {
-  final Daily daily;
   const DaysWeatherView({super.key, required this.daily});
+
+  final Daily daily;
 
   @override
   State<DaysWeatherView> createState() => _DaysWeatherViewState();

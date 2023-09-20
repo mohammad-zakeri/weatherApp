@@ -70,24 +70,24 @@ class ForecastDaysModel extends ForecastDaysEntity {
 
 class Daily {
   Daily({
-      this.dt, 
-      this.sunrise, 
-      this.sunset, 
-      this.moonrise, 
-      this.moonset, 
-      this.moonPhase, 
-      this.temp, 
-      this.feelsLike, 
-      this.pressure, 
-      this.humidity, 
-      this.dewPoint, 
-      this.windSpeed, 
-      this.windDeg, 
-      this.windGust, 
-      this.weather, 
-      this.clouds, 
-      this.pop, 
-      this.uvi,
+    this.dt,
+    this.sunrise,
+    this.sunset,
+    this.moonrise,
+    this.moonset,
+    this.moonPhase,
+    this.temp,
+    this.feelsLike,
+    this.pressure,
+    this.humidity,
+    this.dewPoint,
+    this.windSpeed,
+    this.windDeg,
+    this.windGust,
+    this.weather,
+    this.clouds,
+    this.pop,
+    this.uvi,
   });
 
   Daily.fromJson(dynamic json) {
@@ -143,10 +143,10 @@ class Daily {
 
 class Weather {
   Weather({
-      this.id, 
-      this.main, 
-      this.description, 
-      this.icon,
+    this.id,
+    this.main,
+    this.description,
+    this.icon,
   });
 
   Weather.fromJson(dynamic json) {
@@ -169,10 +169,10 @@ class Weather {
 
 class FeelsLike {
   FeelsLike({
-      this.day, 
-      this.night, 
-      this.eve, 
-      this.morn,
+    this.day,
+    this.night,
+    this.eve,
+    this.morn,
   });
 
   FeelsLike.fromJson(dynamic json) {
@@ -197,12 +197,12 @@ class FeelsLike {
 
 class Temp {
   Temp({
-      this.day, 
-      this.min, 
-      this.max, 
-      this.night, 
-      this.eve, 
-      this.morn,
+    this.day,
+    this.min,
+    this.max,
+    this.night,
+    this.eve,
+    this.morn,
   });
 
   Temp.fromJson(dynamic json) {
@@ -240,21 +240,21 @@ class Temp {
 
 class Current {
   Current({
-      this.dt, 
-      this.sunrise, 
-      this.sunset, 
-      this.temp, 
-      this.feelsLike, 
-      this.pressure, 
-      this.humidity, 
-      this.dewPoint, 
-      this.uvi, 
-      this.clouds, 
-      this.visibility, 
-      this.windSpeed, 
-      this.windDeg, 
-      this.windGust, 
-      this.weather,
+    this.dt,
+    this.sunrise,
+    this.sunset,
+    this.temp,
+    this.feelsLike,
+    this.pressure,
+    this.humidity,
+    this.dewPoint,
+    this.uvi,
+    this.clouds,
+    this.visibility,
+    this.windSpeed,
+    this.windDeg,
+    this.windGust,
+    this.weather,
   });
 
   Current.fromJson(dynamic json) {

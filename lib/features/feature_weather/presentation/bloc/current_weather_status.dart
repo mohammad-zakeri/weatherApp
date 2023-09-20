@@ -7,14 +7,15 @@ abstract class CurrentWeatherStatus{}
 class CurrentWeatherLoading extends CurrentWeatherStatus{}
 
 class CurrentWeatherCompleted extends CurrentWeatherStatus{
+  CurrentWeatherCompleted(this.currentCityEntity);
+
   final CurrentCityEntity currentCityEntity;
 
-  CurrentWeatherCompleted(this.currentCityEntity);
 }
 
 class CurrentWeatherError extends CurrentWeatherStatus{
-  final String message;
-
   CurrentWeatherError(this.message);
+
+  final String message;
 
 }

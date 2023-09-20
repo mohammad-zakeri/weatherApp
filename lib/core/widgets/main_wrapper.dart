@@ -24,6 +24,7 @@ class MainWrapper extends StatelessWidget {
       bottomNavigationBar: BottomNav(controller: pageController),
 
       body: Container(
+        height: height,
 
         decoration: BoxDecoration(
 
@@ -34,7 +35,7 @@ class MainWrapper extends StatelessWidget {
 
         ),
 
-        height: height,
+
 
         child: PageView(
           controller: pageController,

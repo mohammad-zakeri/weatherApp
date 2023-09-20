@@ -132,7 +132,7 @@ class BookmarkScreen extends StatelessWidget {
                                             BlocProvider.of<BookmarkBloc>(context).add(GetAllCityEvent());
                                           },
 
-                                            icon: const Icon(Icons.delete, color: Colors.redAccent),
+                                          icon: const Icon(Icons.delete, color: Colors.redAccent),
                                         ),
 
                                       ],
