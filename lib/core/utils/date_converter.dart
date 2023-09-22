@@ -7,9 +7,7 @@ class DateConverter{
 
     final formatter = DateFormat.MMMd();
 
-    var result = formatter.format(DateTime.fromMillisecondsSinceEpoch(dt * 1000, isUtc: true));
-
-    return result;
+    return formatter.format(DateTime.fromMillisecondsSinceEpoch(dt * 1000, isUtc: true));
   }
 
   /// change dt to our dateFormat ---5:55 AM/PM--- for Example
