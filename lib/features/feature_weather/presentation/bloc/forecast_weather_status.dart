@@ -6,7 +6,6 @@ import 'package:weather_app/features/feature_weather/domain/entities/forecast_da
 abstract class ForecastWeatherStatus extends Equatable{}
 
 class ForecastWeatherLoading extends ForecastWeatherStatus{
-
   @override
   List<Object?> get props => [];
 }
