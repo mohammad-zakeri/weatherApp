@@ -6,7 +6,6 @@ import 'package:weather_app/features/feature_weather/domain/repository/weather_r
 import 'package:weather_app/features/feature_weather/domain/use_cases/get_current_weather_use_case.dart';
 import 'package:weather_app/features/feature_weather/domain/use_cases/get_forecast_weather_use_case.dart';
 import 'package:weather_app/features/feature_weather/presentation/bloc/home_bloc.dart';
-
 import 'features/feature_bookmark/data/data_source/local/database.dart';
 import 'features/feature_bookmark/data/repository/city_repositoryimpl.dart';
 import 'features/feature_bookmark/domain/repository/city_repository.dart';
